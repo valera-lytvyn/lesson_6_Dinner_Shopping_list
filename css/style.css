@@ -25,25 +25,11 @@ main{
       margin: 80px 0px;
 }
 
-input{
-         display: inline-block;
-            width: 60px;
-            /*Размер вашей кнопки или чекбокса*/
-            height: 50px;
-            margin: -1px 4px 0 0;
-            vertical-align: middle;
-            background: white left top no-repeat;
-            cursor: pointer;
-}
-.ini:after {
-   left: 8px;
-   top: 4px;
-   width: 8px;
-   height: 12px;
-   border: solid white;
-   border-width: 0 4px 4px 0;
-   transform: rotate(45deg);
-}
+
+
+
+
+
 .item1{
 background-color: #88839e;
    color: #fff;
@@ -51,6 +37,26 @@ background-color: #88839e;
 height: 80px;
 padding-left: 20px;
 line-height:80px;
+position: relative;
+cursor:pointer;
+}
+
+.item1:hover{
+   border-top: 3px solid #fff;
+   border-bottom: 3px solid #fff;
+   background-color: #625e77;
+}
+.item2:hover {
+   border-top: 3px solid #fff;
+   border-bottom: 3px solid #fff;
+   background-color: #625e77;
+} 
+
+.item1:active{
+background-color: rgb(153, 49, 49);
+}
+.item2:active {
+   background-color: rgb(153, 49, 49);
 }
 
 .item2 {
@@ -60,14 +66,63 @@ font-size: 28px;
 height: 80px;
    padding-left: 20px;
    line-height: 80px;
+   position: relative;
+      cursor: pointer;
+}
+
+.checkbox_input {
+   /* webkit-for chrom and mozila */
+   -webkit-appearance: none;
+   appearance: none;
+   position: absolute;
+}
+
+.checkbox_label {
+   The retreat of the text
+margin: 0px;
+   padding-left: 55px;
+   cursor: pointer;
+
+}
+
+.checkbox_label:before {
+   content: "";
+   display: block;
+   height: 25px;
+   width: 25px;
+   border: 1px solid #ccc;
+   background: #fff;
+   position: absolute;
+      top: 25px;
+      left: 15px;
+      z-index: 1;
+}
+
+.checkbox_label:after{
+   content: "";
+      display: block;
+      height: 25px;
+      width: 25px;
+      border: 1px solid #ccc;
+      background: url(../img/chekbox.png) no-repeat;
+   background-size: 25px 25px;
+   opacity: 0;
+         position: absolute;
+         top: 25px;
+         left: 15px;
+         z-index: 2;
+}
+.checkbox_input:checked + .checkbox_label {
+   text-decoration: line-through;
 }
 
 
-
-
-
-
-
+.checkbox_input:checked + .checkbox_label:after {
+   opacity: 1;
+   } 
+.checkbox_input:checked+.checkbox_label:after {
+   opacity: 1;
+}
 
 footer{
 background-color: #4a4f56;
@@ -76,3 +131,4 @@ height: 80px;
 text-align: center;
 margin: 0px 150px 80px;
 }
+
