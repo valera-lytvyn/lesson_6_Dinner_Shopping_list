@@ -1,9 +1,6 @@
-* {
+body {
    margin: 0;
    padding: 0;
-}
-
-body {
    background-color: #3b3f45;
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    font-size: 18px;
@@ -24,7 +21,7 @@ header {
 
 main {
    color: #fff;
-      margin: 80px 150px;
+   margin: 80px 150px;
 
 }
 .item:nth-child(even){
@@ -60,10 +57,10 @@ main {
 }
 
 .checkbox_label {
-     padding-left: 55px;
+   padding-left: 55px;
    cursor: pointer;
    display: inline-block;
-      width: calc(100% - 55px);
+   width: calc(100% - 55px);
 }
 
 .checkbox_label:before {
